@@ -14,6 +14,12 @@ class Sprite {
     }
 
     update(){
+        if (Math.ceil(this.position.y + this.height >= canvasHeight)){
+            this.onGround = true
+        } else {
+            this.onGround = false
+        }
+
         if (this.position.y + this.height > canvasHeight){
             this.position.y = canvasHeight - this.height
             this.velocity.y = 0
@@ -26,9 +32,14 @@ class Sprite {
 
         this.draw()
     }
+
+    jump() {
+        if (!this.onGround) return
+        this.velocity.y = -16
+    }
 };
 
-class Fighter extends Sprite {
+class Character extends Sprite {
     constructor({
         position,
         velocity,
@@ -45,10 +56,11 @@ class Fighter extends Sprite {
         this.height = dimensions.height
 
         this.lastKeyPressed
+        this.onGround
     }
 }
 
-const player = new Fighter({
+const player = new Character({
     position: {
         x: 40,
         y: 0

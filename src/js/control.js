@@ -72,7 +72,7 @@ function handleControls(){
 		}
 
 		if (keys.w.pressed){
-			player.velocity.y = -10
+			player.jump()
 		}
 	}
 }
