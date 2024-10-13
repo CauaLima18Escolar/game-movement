@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c1c;
+}
+
+canvas {
+    display: none;
+    outline: 6px solid #3A2D24;
+}
+
+
+#gameMenu {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 800px;
+}
+
+.gameTitle {
+    font-size: 4rem;
+    padding: 24px;
+    border: 6px solid #3A2D24;
+    background-color: #fff;
+    color: #3A2D24;
+}
+
+.menuBTN {
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 24px;
+    border: 6px solid #3A2D24;
+    
+    color: #3A2D24;
+    transition: 0.3s;
+}
+
+.menuBTN:hover {
+    transform: translateY(-16px);
+    background-color: #3A2D24;
+    color: #fff;
+    border: 6px solid #fff;
+}
+
+
+#characterMenu {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 800px;
+    text-align: center;
+}
+
+.characterMenuTitle {
+    font-size: 4rem;
+    padding: 24px;
+    border: 6px solid #3A2D24;
+    background-color: #fff;
+    color: #3A2D24;
+}
+
+.chooses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 24px;
+    background-color: #fff;
+    border: 6px solid #3A2D24;
+}
+
+.choose {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: #fff;
+    padding: 16px;
+    justify-content: space-between;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.choose img {
+    pointer-events: none;
+    height: 140px;
+}
+
+.choose:hover {
+    background-color: #3A2D24;
+    color: #fff;
+}
+
+#gameOver {
+    position: absolute;
+    display: none;
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 800px;
+}
+
+.gameOver-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 24px;
+    border: 6px solid #3A2D24;
+    background-color: #fff;
+    color: #3A2D24;
+}
+
+.returnMenu {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 24px;
+    border: 6px solid #3A2D24;
+    background-color: #fff;
+    color: #3A2D24;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.returnMenu:hover {
+    transform: translateY(-16px);
+    background-color: #3A2D24;
+    color: #fff;
+    border: 6px solid #fff;
+}
+

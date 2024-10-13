@@ -3,13 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <script src="./src/js/game.js" defer></script>
-    <script src="./src/js/sprites.js"></script>
-    <script src="./src/js/control.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/game.js" defer></script>
+    <script src="./js/window-change.js" defer></script>
+    <script src="./js/sprites.js"></script>
+    <script src="./js/control.js"></script>
     <title>Game</title>
 </head>
 <body>
+    <audio id="main-menu-msc" src="./assets/music/main-ost.mp3" loop></audio>
+    <audio id="solo-battle-msc" src="./assets/music/forest-ost.mp3" loop></audio>
+    <audio id="death-msc" src="./assets/music/death-ost.mp3" loop></audio>
+
+    <main id="gameMenu">
+        <h1 class="gameTitle">The Eldritch Saga</h1>
+        <button onclick="windowChange('character')" class="menuBTN">Solo</button>
+        <button class="menuBTN">Multiplayer</button>
+    </main>
+
+    <article id="characterMenu">
+
+        <h1 class="characterMenuTitle">Select your character</h1>
+
+        <div class="chooses">
+            <button onclick="getCharacter(event)" class="choose">
+                <img src="./assets/player/Chooses/enchantress.png" alt="">
+                
+                Enchantress
+            </button>
+            <button onclick="getCharacter(event)" class="choose">
+                <img src="./assets/player/Chooses/knight-g_1.png" alt="">
+                
+                Knight
+            </button>
+            <button onclick="getCharacter(event)" class="choose">
+                <img src="./assets/player/Chooses/musketeer-g_1.png" alt="">
+                
+                Musketeer
+            </button>
+        </div>
+    </article>
+
     <canvas></canvas>
+
+    <div id="gameOver">
+        <h1 class="gameOver-title">Fim de jogo :C</h1>
+        <button onclick="restart()" class="returnMenu">Voltar para o Menu</button>
+    </div>
 </body>
 </html>
